@@ -9,7 +9,7 @@ with open('domains.txt', 'wb') as local_file:
     # скачиваем файл
     local_file.write(file_object.content)
 with open('domains.txt') as local_file:
-    # создаем список доменов, игнорируя технические и пустые строки
+    # создаем список доменов, игнорируя технические и пустые строки, домены на www
     domains = [row.strip() for row in local_file if row.strip() and row[0] != '#' and row[0:3] != 'www']
    
 # выделяем TLD
